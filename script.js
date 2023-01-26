@@ -30,16 +30,12 @@ function changeColor(){
         this.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;  
         this.style.filter = 'brightness(100%)';      
     }else{
-        const currentBrightness = this.style.filter.replace(/\D/g, "");
-       
+        const currentBrightness = this.style.filter.replace(/\D/g, "");//extract number from string
         if(currentBrightness > 0){
             const newBrightness = currentBrightness - 10;
             this.style.filter = `brightness(${newBrightness}%)`;
-        }
-        
-    }
-    
-    
+        }        
+    }    
 }
 
 function generateGrids(grids){

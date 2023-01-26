@@ -8,17 +8,21 @@ body {
 }
 
 header {
-    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #868B8E;
+    color: #EEEDE7;
     height: 50px;
 }
 
 main {
     padding-top:10px;
-    padding-bottom:10px;
-          
+    padding-bottom:10px;          
     display: flex;
     justify-content: center;
     gap: 15px;
+    background-color: #B9B7BD;
 }
 
 .container {
@@ -27,13 +31,13 @@ main {
     display: flex;
     gap: 1px;
     border-style: solid;
-    background-color: grey;
+    background-color: #868B8E;
 }
 
 .grid-column {
     flex: 1;
 
-    background-color: grey;
+    background-color: #868B8E;
     display: flex;
     flex-direction: column;
     gap: 1px;   
@@ -42,10 +46,14 @@ main {
 .grid-row {
     flex: 1;
     background-color: white;
-   
+    cursor: crosshair;
 }
 
 footer{
-    background-color: grey;
+    background-color: #868B8E;
+    color:#EEEDE7;
     height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

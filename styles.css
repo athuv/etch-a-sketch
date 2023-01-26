@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: calc(100vh - 100px);
+}
+
+header {
+    background-color: grey;
+    height: 50px;
+}
+
+main {
+    padding-top:10px;
+    padding-bottom:10px;
+          
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.container {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    gap: 1px;
+    border-style: solid;
+    background-color: grey;
+}
+
+.grid-column {
+    flex: 1;
+
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;   
+}
+
+.grid-row {
+    flex: 1;
+    background-color: white;
+   
+}
+
+footer{
+    background-color: grey;
+    height: 50px;
+}

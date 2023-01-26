@@ -1,12 +1,14 @@
 let gridContainer = document.getElementById('grid-container');
-let btnGrid = document.getElementById('btn-grid');
+let rangeGrid = document.getElementById('grid-range');
 
 generateGrids(50); //50x50 grid set as default
 colorGrid();
 
-btnGrid.addEventListener('click',function(){
-    const grid = prompt('value?');
+rangeGrid.addEventListener('input',function(){
+    const grid = this.value;
     gridContainer.innerHTML = '';
+    //console.log(this.previousElementSibling);
+    this.previousElementSibling.innerText = `${grid}x${grid}`;
     generateGrids(grid);
     colorGrid();
 });
@@ -19,7 +21,7 @@ function colorGrid(){
 }
 
 function changeColor(){
-    this.style.backgroundColor = 'green';
+    this.style.backgroundColor = 'red';
 }
 
 function generateGrids(grids){

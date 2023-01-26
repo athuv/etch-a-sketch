@@ -7,7 +7,6 @@ colorGrid();
 rangeGrid.addEventListener('input',function(){
     const grid = this.value;
     gridContainer.innerHTML = '';
-    //console.log(this.previousElementSibling);
     this.previousElementSibling.innerText = `${grid}x${grid}`;
     generateGrids(grid);
     colorGrid();
@@ -21,7 +20,26 @@ function colorGrid(){
 }
 
 function changeColor(){
-    this.style.backgroundColor = 'red';
+    let r, g, b;
+
+    r = Math.floor(Math.random() * 256);
+    g = Math.floor(Math.random() * 256);
+    b = Math.floor(Math.random() * 256);
+
+    if(this.style.backgroundColor == ""){
+        this.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;  
+        this.style.filter = 'brightness(100%)';      
+    }else{
+        const currentBrightness = this.style.filter.replace(/\D/g, "");
+       
+        if(currentBrightness > 0){
+            const newBrightness = currentBrightness - 10;
+            this.style.filter = `brightness(${newBrightness}%)`;
+        }
+        
+    }
+    
+    
 }
 
 function generateGrids(grids){
